@@ -9,4 +9,5 @@ console.log(Math.number);
 console.log(Math);
 console.log(Math.PI);
 console.log(Math.Sub(20,10));
+console.log(Math.test.Phone_Number);
 
