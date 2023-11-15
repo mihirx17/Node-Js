@@ -1,13 +1,22 @@
-const Math = require("./Math"); // Corrected module name
+// Corrected module name for "Math"
+const MathModule = require("./Math");
 
-//console.log(process.argv);
-//console.log(calculator.Sub(10, 2)); // Using the correct method name
-//console.log(Math.number); // Accessing the exported variable
+// Corrected path for "Cars" module
+const cars = require("./Cars");
 
-console.log(Math.number);
+// Uncommenting the following lines
+// console.log(process.argv);
+// console.log(calculator.Sub(10, 2)); // Assuming calculator is defined somewhere
+// console.log(Math.number); // Assuming Math module exports a variable
 
-console.log(Math);
-console.log(Math.PI);
-console.log(Math.Sub(20,10));
-console.log(Math.test.Phone_Number);
+// Using the correct variable name for the "number" property in the Math module
+console.log(MathModule.number);
 
+// Logging the entire Math module
+console.log(MathModule);
+
+// Accessing properties/methods from the Math module
+console.log(MathModule.PI);
+console.log(MathModule.Sub(20, 10));
+console.log(MathModule.test.Phone_Number);
+console.log(cars.info);
