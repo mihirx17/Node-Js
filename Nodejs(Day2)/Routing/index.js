@@ -14,7 +14,7 @@ app.get("/apple/orange", (req, res) => {
     res.send("You are connected to Apple/Orange Path..");
 });
 
-// Handling all other routes that were not explicitly defined
+// Handling GET request for all other routes that were not explicitly defined
 app.get("*", (req, res) => {
     console.log("This Path Does not Exist..");
     res.send("This Path Does not Exist..");
@@ -24,6 +24,13 @@ app.get("*", (req, res) => {
 app.post("/First", (req, res) => {
     console.log("POST request Checked");
     res.send("POST Request");
+});
+
+// Handling GET request with path parameters ":username" and ":id"
+app.get("/:username/:id", (req, res) => {
+    // Extracting values from path parameters
+    let { username, id } = req.params;
+    res.send(`Welcome you @${username} and Your Id is ${id}`);
 });
 
 // Setting up the server to listen on the specified port

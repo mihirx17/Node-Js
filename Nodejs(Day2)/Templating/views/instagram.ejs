@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fafafa;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .follow-btn,
+        .followers-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .follow-btn {
+            background-color: #0095f6;
+            color: #fff;
+        }
+
+        .followers-btn {
+            background-color: #fff;
+            color: #262626;
+            border: 1px solid #dbdbdb;
+        }
+
+        .follow-btn:hover,
+        .followers-btn:hover {
+            background-color: #0077cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <h1>This page belong to   <%= username %></h1>
+        <button class="follow-btn">Follow</button>
+        <button class="followers-btn">Followers</button>
+    </div>
+</body>
+</html>
