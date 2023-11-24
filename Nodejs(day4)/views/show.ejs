@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 20px;
+            text-align: center;
+        }
+
+        #details-container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            color: #ff1e00; /* Red color for text */
+        }
+
+        #details-container p {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        #details-container .username {
+            color: #ff2f00;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        #details-container .post-content {
+            font-style: italic;
+            color: #555;
+        }
+
+        h1 {
+            color: #ff5100;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Details</h1>
+    <div id="details-container">
+        <p>ID: <%= post.id %></p>
+        <div class="username">@ <%= post.username %></div>
+        <div class="post-content"><%= post.postContent %></div>
+    </div>
+</body>
+</html>
