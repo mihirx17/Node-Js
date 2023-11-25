@@ -47,9 +47,13 @@
 <body>
     <h1>User Details</h1>
     <div id="details-container">
-        <p>ID: <%= post.id %></p>
-        <div class="username">@ <%= post.username %></div>
-        <div class="post-content"><%= post.postContent %></div>
+        <% if (post) { %>
+            <p>ID: <%= post.id %></p>
+            <div class="username">@ <%= post.username %></div>
+            <div class="post-content"><%= post.postContent %></div>
+        <% } else { %>
+            <p>No user details found.</p>
+        <% } %>
     </div>
 </body>
 </html>

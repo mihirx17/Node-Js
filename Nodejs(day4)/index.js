@@ -47,7 +47,19 @@ app.get("/post/:id", (req, res) => {
     console.log(post);
     res.render("Show.ejs", { post: post });
 });
+app.patch("/post/:id", (req, res) => {
+    let id = req.params.id;
+    let newcontent=req.body;
+    console.log(newcontent);
+    console.log(id);
+    const post = posts.find((p) => id == p.id);
+    post.postContent=newcontent;
+    console.log(post);
+
+    res.send("Patch has been completed");
+});
 
 app.listen(8000, () => {
     console.log(`Connecting to port 8000`);
 });
+ 
