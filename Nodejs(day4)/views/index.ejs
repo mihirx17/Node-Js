@@ -95,9 +95,12 @@
                 <div class="username">@ <%= post.username %></div>
                 <div class="post-content"><%= post.postContent %></div>
                 <a href="http://localhost:8000/post/<%= post.id %>">See in details</a>
+                <a id="change" href="http://localhost:8000/post/<%= post.id %>/Edit">Edit</a>
             </div>
         <%  }%> 
         <a href="http://localhost:8000/post/new" class="create-post-button">Create post</a>
+        
     </div>
+    
 </body>
 </html>
