@@ -23,9 +23,16 @@ app.use(express.static(path.join(__dirname, "public")));
 let posts = [
     { id: uuidv4(), username: "Spiderman", postContent: "I swing from buildings" },
     { id: uuidv4(), username: "Ironman", postContent: "I build suits" },
-    { id: uuidv4(), username: "Black Widow", postContent: "I am a skilled spy" }
+    { id: uuidv4(), username: "Black Widow", postContent: "I am a skilled spy" },
+    { id: uuidv4(), username: "Captain America", postContent: "Shielding justice in action" },
+    { id: uuidv4(), username: "Thor", postContent: "Wielding Mjolnir and summoning storms" },
+    { id: uuidv4(), username: "Hulk", postContent: "Smashing everything in sight" },
+    { id: uuidv4(), username: "Doctor Strange", postContent: "Bending reality with the mystic arts" },
+    { id: uuidv4(), username: "Captain Marvel", postContent: "Harnessing cosmic energy for good" },
+    { id: uuidv4(), username: "Ant-Man", postContent: "Shrinking down and saving the day" },
+    { id: uuidv4(), username: "Wolverine", postContent: "Unleashing adamantium claws in battle" },
+    { id: uuidv4(), username: "Scarlet Witch", postContent: "Warping reality with chaos magic" }
 ];
-
 // Define routes
 app.get('/', (req, res) => {
     res.render("index.ejs", { posts: posts });
