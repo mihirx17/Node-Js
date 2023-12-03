@@ -13,6 +13,12 @@ app.get("/apple/orange", (req, res) => {
     console.log("You are connected to Apple/Orange Path..");
     res.send("You are connected to Apple/Orange Path..");
 });
+app.get("/:username/:id", (req, res) => {
+    // Extracting values from path parameters
+    let { username, id } = req.params;
+    res.send(`Welcome you @${username} and Your Id is ${id}`);
+});
+
 
 // Handling GET request for all other routes that were not explicitly defined
 app.get("*", (req, res) => {
@@ -27,11 +33,6 @@ app.post("/First", (req, res) => {
 });
 
 // Handling GET request with path parameters ":username" and ":id"
-app.get("/:username/:id", (req, res) => {
-    // Extracting values from path parameters
-    let { username, id } = req.params;
-    res.send(`Welcome you @${username} and Your Id is ${id}`);
-});
 
 // Setting up the server to listen on the specified port
 app.listen(port, (err) => {
